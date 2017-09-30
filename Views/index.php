@@ -45,7 +45,6 @@
 	</head>
 	<body ng-app="myApp">
 		<section class="body">
-
 			<!-- start: header -->
 			<header class="header">
 				<div class="logo-container">

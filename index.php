@@ -1,5 +1,5 @@
 <?php
-header('Location: http://107.180.66.98:90//SAO/Views/index.php#/inicio'); /* Redirect browser */
+header('Location: http://localhost:8080/apok/Views/index.php#/inicio'); /* Redirect browser */
 exit();
 
 

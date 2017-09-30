@@ -8,11 +8,8 @@ var myApp = angular.module('myApp',['ngRoute','ui.router']).factory('$exeptionHa
 });
 
 
-
-
-
 myApp.config(function ($stateProvider, $urlRouterProvider) {
-     var baseUrl = "http://localhost:3000/";
+     var baseUrl = "http://localhost:3000/";//cambiar esta ruta segun la del backend
      $urlRouterProvider.when("/", "/inicio");
 
      $stateProvider
@@ -33,16 +30,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
               }
             }
         })
-        
-        
-        
-       
-        
-        
-         
         .state("eliminar_acceso", {
             url:"/eliminar_acceso/:id_usuario/:id_acceso/:eliminar",
-            //templateUrl: "../Views/Pages/table_acceso.php",
             controller: "usuarioController",
             resolve: {
               urlbase: function () {
@@ -50,8 +39,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
               }
             }
         })
-        
-        
         .state("agregar_usuario", {
             url:"/agregar_usuario",
             templateUrl: "../Views/Pages/agregar_usuario.php",
@@ -74,7 +61,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         })
          .state("eliminar_usuario", {
             url:"/eliminar_usuario/:id_usuario/:eliminar",
-            //templateUrl: "../Views/Pages/eliminar_puerto.php",
             controller: "usuarioController",
             resolve: {
               urlbase: function () {
